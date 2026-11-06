@@ -1,0 +1,33 @@
+VAS-K · PROYECTO WEB UNIFICADO
+==============================
+
+CÓMO ABRIR
+1. Descomprime este ZIP.
+2. Abre la carpeta `proyecto` en Visual Studio Code.
+3. Instala la extensión Live Server si no la tienes.
+4. Abre `index.html` y selecciona "Open with Live Server".
+
+PRODUCTOS Y PRECIOS (js/app.js, constantes PRODUCTOS y PRECIO_SALSA)
+- Vas-kita (pequeña) .................. $13.000
+- Vas-k (mediana) ..................... $32.000
+- Vas-kota (grande) ................... $43.000
+Al personalizar: el TAMAÑO y la CANTIDAD son obligatorios; los toppings (hasta 2, sin costo)
+y las salsas (hasta 2, +$1.000 c/u) son OPCIONALES. Los límites y el precio de la salsa se
+cambian en MAX_TOPPINGS, MAX_SALSAS y PRECIO_SALSA (js/app.js).
+
+PEDIDO
+El botón "Pedir por WhatsApp" de la bolsa abre WhatsApp (número en la constante WHATSAPP de
+js/app.js) con el detalle del pedido. No requiere iniciar sesión ni pago en la web.
+
+ESTRUCTURA
+- index.html: banner de portada, menú y llamado a la acción.
+- historia.html: hero editorial (el que antes estaba en inicio) + misión, visión y valores.
+- productos.html: hero dividido (el que antes estaba en historia) + catálogo.
+- galeria.html: galería con las fotos nuevas.
+- contacto.html: HABLEMOS (WhatsApp / Instagram) + formulario de mensaje.
+- css/, js/app.js, img/
+
+NOTAS
+- La bolsa y los favoritos se guardan en el navegador (localStorage).
+- El formulario de contacto abre la app de correo del usuario (mailto) sin destinatario:
+  agrega tu correo en contacto.html (mailto:TUCORREO?subject=...) si quieres recibirlo.
