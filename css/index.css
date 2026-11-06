@@ -1,0 +1,38 @@
+/* Banner de portada (tomado de vas-k-proyecto). El resto de estilos está en header-footer.css */
+.banner{
+  position:relative;isolation:isolate;display:flex;flex-direction:column;justify-content:flex-end;
+  min-height:640px;background:#5a4636 url(../img/Capturadepantalla2026-09-07150543_sin_texto.png) center/cover no-repeat;
+}
+/* velo suave a la izquierda para que el texto crema se lea sobre la foto */
+.banner::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(45,24,16,.62),rgba(45,24,16,.28) 45%,rgba(45,24,16,0) 72%)}
+.texto-banner{
+  flex:1;display:flex;flex-direction:column;justify-content:center;gap:30px;
+  width:min(100%,606px);padding:70px 0 70px 10%;
+}
+.autentica{font-family:var(--sans);font-weight:500;font-size:14px;color:#FBEDD7}
+.autentica p{margin:0}
+.sabor{font-family:var(--serif);font-weight:400;font-style:italic;color:#FFF9ED;line-height:.9}
+.sabor h1{margin:0;font-family:var(--serif);font-weight:400;font-size:clamp(45px,4.6vw,62px);line-height:.95;letter-spacing:-.01em}
+.sabor em{color:#E6A66E}
+.tarta{color:#FBEDD7;font-family:var(--sans);max-width:406px}
+.botones{display:flex;align-items:center;flex-wrap:wrap;gap:20px}
+.descubre{
+  background:#A13F2F;text-align:center;font-size:13px;padding:13px 14px;width:200px;text-decoration:none;
+  color:#FBEDD7;font-family:var(--sans);display:inline-flex;align-items:center;justify-content:center;gap:8px;
+}
+.descubre svg{flex-shrink:0}
+.descubre:hover{background:#913425}
+.conoce{
+  padding:0 5px 3px;text-decoration:none;font-size:12px;color:#FBEDD7;font-family:var(--sans);
+  border-bottom:1px solid #FBEDD7;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;
+}
+.ingredientes{
+  background:#dac8b6;width:100%;display:grid;grid-template-columns:repeat(4,1fr);padding:10px 7%;
+}
+.parteingredientes{padding:6px 18px;border-right:1px solid #866e61}
+.parteingredientes:last-child{border-right:0}
+.parteingredientes h2{margin:0;font:600 15px var(--serif);letter-spacing:0;color:#3e2921;padding:5px 0}
+.parteingredientes b{color:#a13f2f;font-size:15px;margin-right:6px}
+.parteingredientes p{margin:0 0 0 22px;font-family:var(--serif);font-size:11px;color:#866e61}
+@media(max-width:900px){.texto-banner{padding-left:7%}.ingredientes{grid-template-columns:repeat(2,1fr);row-gap:6px}.parteingredientes:nth-child(2){border-right:0}}
+@media(max-width:600px){.banner{min-height:600px}.texto-banner{padding:50px 7%;gap:24px}.banner::before{background:linear-gradient(180deg,rgba(45,24,16,.55),rgba(45,24,16,.35))}.descubre{width:100%}.ingredientes{padding:10px 5%}.parteingredientes{padding:6px 10px}}
